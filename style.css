@@ -1,0 +1,939 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+/* @import url('https://fonts.cdnfonts.com/css/metropolis'); */
+@font-face {
+  font-family: Metropolis;
+  src: url("./assets/Fonts/metropolis/Metropolis-Black.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ed017f;
+  --secondary-color: #676767;
+  --tertiary-color: #343434;
+  --quaternary-color: #999999;
+}
+
+body {
+  font-family: Metropolis, sans-serif;
+}
+
+.container {
+  max-width: 1396px;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col-2 {
+  width: calc(8.33% * 2);
+  padding: 0 15px;
+}
+
+.col-4 {
+  width: calc(8.33% * 4);
+  padding: 0 15px;
+}
+
+.col-3 {
+  width: calc(8.33% * 3);
+  padding: 0 15px;
+}
+
+.col-8 {
+  width: calc(8.33% * 8);
+  padding: 0 15px;
+}
+
+.col-20 {
+  width: 20%;
+  padding: 0 15px;
+}
+
+.col-25 {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.col-50 {
+  width: 50%;
+  padding: 0 15px;
+}
+
+.col-33 {
+  width: 33.33%;
+  padding: 0 15px;
+}
+
+/* 
+===================
+Navbar Section
+===================
+*/
+
+.hdr-sec {
+  padding: 15px 0;
+}
+
+.nav-logo > a {
+  width: 175px;
+}
+
+.nav-logo > a > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+nav,
+.navbar-collapsed,
+.navbar-collapsed > ul {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.navbar-collapsed > ul {
+  margin: 0 auto;
+}
+
+.nav-links:hover {
+  color: var(--primary-color);
+}
+
+.navbar-collapsed {
+  flex-grow: 1;
+}
+
+.nav-items {
+  margin-right: 41.6px;
+  font-family: "Metropolis-normal";
+}
+
+.search-logo {
+  margin-right: 20px;
+}
+
+.nav-links {
+  color: black;
+}
+
+.nav-btn {
+  margin-left: 27px;
+}
+
+.navbar-toggler {
+  display: none;
+}
+
+.primary-btn {
+  padding: 18px 30px;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+}
+
+.primary-btn:hover {
+  background-color: #f152a7;
+  cursor: pointer;
+}
+
+/* 
+==================
+Loan Section
+==================
+*/
+
+.loan-sec {
+  min-height: 654px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  /* margin-top: 108px; */
+}
+
+.loan {
+  display: flex;
+  align-items: center;
+}
+
+/* .loan-row{
+    align-items: center;
+} */
+
+.title1 {
+  width: 435px;
+  font-size: 63px;
+  font-weight: 800;
+  line-height: 68px;
+}
+
+.loan-content {
+  padding-top: 111px;
+}
+
+.loan-content > p {
+  font-family: "Metropolis-normal";
+  font-size: 16px;
+  color: var(--secondary-color);
+  margin: 23px 0 42px;
+  max-width: 391.74px;
+}
+
+/* .apply-btn{
+    margin-top: 38px;
+    max-width: 376.28px;
+} */
+
+.secondary-btn {
+  font-size: 12px;
+  padding: 13px 22.5px;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  color: white;
+  margin-right: 20px;
+}
+
+.secondary-btn:hover {
+  background-color: #f152a7;
+  cursor: pointer;
+}
+
+.calculator-btn {
+  font-size: 12px;
+  padding: 13px 20px;
+  border-radius: 4px;
+  background-color: white;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.calculator-btn:hover {
+  background-color: #ed017f;
+  color: white;
+  cursor: pointer;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  margin-top: 9px;
+}
+
+.phone {
+  margin-top: 51px;
+  /* align-items: center; */
+}
+
+.phone > a {
+  display: flex;
+  align-items: center;
+}
+
+.phone > a > img {
+  width: 24px;
+}
+
+.phone > .call-logo > span {
+  color: black;
+  margin: 0 5px;
+}
+
+.call-logo {
+  position: relative;
+  display: inline-block;
+}
+
+.call-logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100px;
+  width: 1px;
+  height: 100%;
+  background-color: #cccccc;
+}
+
+.social-media > ul {
+  display: flex;
+  align-items: center;
+  margin: 51px 0 0 39.19px;
+}
+
+.social-media > ul > a {
+  display: inline-block;
+}
+
+.media-logo {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* .family-sec{
+    position: relative;
+    top: 0;
+    left: 674px;
+} */
+
+.family-pic {
+  width: 932.96px;
+  max-height: 654px;
+  position: relative;
+  top: 10px;
+  right: 35px;
+}
+
+.family-pic > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.car-loan {
+  padding: 19.5px 25.92px;
+  position: absolute;
+  top: 25px;
+  left: 105px;
+  border: none;
+  box-shadow: 0px 0px 60px lightgray;
+  border-radius: 55px;
+}
+
+.car-loan:hover {
+  box-shadow: 0px 0px 20px lightgray;
+  cursor: pointer;
+}
+
+.car-loan > a {
+  display: flex;
+  align-items: center;
+}
+
+.car-loan > a > img {
+  width: 30.65px;
+  margin-right: 20px;
+}
+
+.car-loan > a > span {
+  margin: 0 4.32px;
+  font-weight: 600;
+  color: black;
+}
+
+.home-loan {
+  padding: 19.5px 25.92px;
+  position: absolute;
+  top: 130px;
+  right: 70px;
+  border: none;
+  box-shadow: 0px 0px 60px lightgray;
+  border-radius: 55px;
+}
+
+.home-loan:hover {
+  box-shadow: 0px 0px 20px lightgray;
+  cursor: pointer;
+}
+
+.home-loan > a {
+  display: flex;
+  align-items: center;
+}
+
+.home-loan > a > img {
+  width: 30.65px;
+  margin-right: 20px;
+}
+
+.home-loan > a > span {
+  margin: 0 4.32px;
+  font-weight: 600;
+  color: black;
+}
+
+/* 
+============================
+Customer Experience Section
+============================
+*/
+
+.customer-sec {
+  padding-top: 200px;
+}
+
+.customer-heading {
+  text-align: center;
+}
+
+.customer-heading > p {
+  max-width: 622.42px;
+  margin: 15px auto;
+  font-family: "Metropolis-normal";
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--quaternary-color);
+}
+
+.title2 {
+  color: var(--tertiary-color);
+  font-size: 36px;
+}
+
+.card-row {
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.card {
+  width: 259px;
+  margin: 30px 50px;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 20px black;
+  cursor: pointer;
+}
+
+.card-desc {
+  padding: 0 75px 0 24px;
+}
+
+.card-desc > h4 {
+  color: var(--tertiary-color);
+}
+
+.card-desc > p {
+  margin-top: 10px;
+  font-family: "Metropolis-normal";
+  max-width: 160px;
+  font-size: 14px;
+  color: var(--quaternary-color);
+}
+
+.card-img > img {
+  margin-left: 24px;
+}
+
+/* 
+=========================
+Our Service Section
+=========================
+*/
+
+.service-sec {
+  padding: 40px 0;
+  background-color: #fef9fc;
+}
+
+.service-hdr {
+  text-align: center;
+}
+
+.title3 {
+  color: var(--tertiary-color);
+  font-size: 36px;
+}
+
+.service-hdr > p {
+  font-family: "Metropolis-normal";
+  max-width: 791.88px;
+  margin: 15px auto;
+  font-size: 16px;
+  color: var(--quaternary-color);
+}
+
+.pic-row {
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.pic-card {
+  width: 254px;
+  height: 457px;
+  margin: 0 auto;
+}
+
+.pic-card1 {
+  margin-left: 76px;
+  height: 457px;
+}
+
+.pic-card > a,
+.pic-card1 > a {
+  min-height: 365px;
+}
+
+.pic-card > a > img,
+.pic-card1 > a > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.pic-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 22px;
+}
+
+.pic-desc > p {
+  font-family: "Metropolis-normal";
+  width: 195px;
+  color: var(--tertiary-color);
+}
+
+.pic-desc > img {
+  width: 30.83px;
+  height: 30.83px;
+  margin-left: 22px;
+}
+
+/* 
+===================
+Result Section
+===================
+*/
+
+.result-sec {
+  min-height: 648px;
+  padding: 99px 0 0px;
+}
+
+.result-hdr {
+  text-align: center;
+}
+
+.title4 {
+  color: var(--tertiary-color);
+  font-size: 36px;
+}
+
+.result-hdr > p {
+  font-family: "Metropolis-normal";
+  max-width: 520.6px;
+  margin: 20px auto 91px;
+  font-size: 16px;
+  color: var(--quaternary-color);
+}
+
+.folio-card {
+  width: 172px;
+  margin: 0 auto 55px;
+}
+
+.folio-card:hover {
+  cursor: pointer;
+}
+
+.title5 {
+  font-size: 40px;
+  color: var(--tertiary-color);
+  margin-bottom: 8px;
+}
+
+.folio-card > p,
+.folio-card1 > p {
+  font-family: "Metropolis-normal";
+  color: var(--secondary-color);
+  font-size: 16px;
+}
+
+.first-card > .title5 {
+  color: var(--primary-color);
+}
+
+.title5 > span {
+  font-size: 27px;
+}
+
+/* 
+===================
+Footer Section
+===================
+*/
+
+.social-icon-list {
+  display: flex;
+  list-style-type: none;
+}
+
+.media-links {
+  width: 24px;
+  height: 24px;
+}
+
+.media-links > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.footer-hdr {
+  font-family: "Metropolis";
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.footer-links > p {
+  width: 180px;
+  font-family: "Metropolis-regular";
+  font-size: 14px;
+  color: var(--secondary-color);
+  margin-bottom: 16px;
+}
+
+.social-icon-list > li > a {
+  margin-right: 16px;
+}
+
+.products,
+.getstarted,
+.about {
+  font-family: "Metropolis";
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: var(--tertiary-color);
+}
+
+.footer-list > li > a {
+  font-family: "Metropolis-regular";
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+}
+
+.footer-links {
+  margin: 0 35px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 992px) {
+  /* Navbar Section */
+  .navbar-collapsed {
+    display: none;
+  }
+
+  .navbar-toggler {
+    display: block;
+    margin-left: auto;
+  }
+
+  .hdr-sec {
+    position: relative;
+  }
+
+  #nav-check:checked ~ .navbar-collapsed {
+    display: block;
+    position: absolute;
+    top: 95.84px;
+    left: 0;
+    right: 0;
+    padding: 15px 0;
+    height: 70vh;
+    z-index: 888888;
+    background-color: antiquewhite;
+  }
+
+  .navbar-collapsed > ul {
+    flex-direction: column;
+  }
+
+  .search-logo,
+  .navbtn {
+    text-align: center;
+    margin: 0 !important;
+  }
+
+  .nav-items {
+    margin: 0 0 20px !important;
+  }
+
+  /* Loan section */
+
+  .col-4,
+  .col-8 {
+    width: 100%;
+  }
+
+  .family-pic {
+    margin: 0 auto;
+    max-height: 630px;
+    width: 920px;
+  }
+
+  .family-pic > img {
+    height: 50%;
+    width: 50%;
+    object-fit: contain;
+  }
+
+  .home-loan,
+  .car-loan {
+    display: flex;
+    justify-content: center;
+    width: 170px;
+    height: 50px;
+  }
+
+  .car-loan > a > img,
+  .home-loan > a > img {
+    height: 24.65px;
+    width: 24.65px;
+    margin-right: 5px;
+  }
+
+  .car-loan > a > span,
+  .home-loan > a > span {
+    font-size: 14px;
+  }
+
+  .loan-content {
+    padding-top: 15px;
+  }
+
+  .title1 {
+    font-size: 70px;
+  }
+
+  /* customer experience section */
+
+  .customer-heading {
+    text-align: center;
+  }
+
+  .title2 {
+    font-size: 30px;
+  }
+
+  .customer-heading > p {
+    font-size: 10px;
+  }
+
+  .card {
+    margin: 20px auto;
+  }
+
+  /* Service section */
+
+  .col-3 {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Navbar section */
+
+  .nav-logo > a {
+    width: 160px;
+  }
+
+  /* Loan section */
+  .loan-row {
+    flex-wrap: wrap-reverse;
+  }
+
+  .col-8,
+  .col-4 {
+    width: 100%;
+  }
+
+  .title1 {
+    font-size: 50px !important;
+  }
+
+  .family-pic > img {
+    height: 538px;
+    width: 770px;
+  }
+
+  .home-loan {
+    right: 208px;
+  }
+
+  .car-loan {
+    left: 84px;
+  }
+
+  /* Footer section */
+
+  .col-20 {
+    width: 50%;
+  }
+
+  .footer-links {
+    margin: 20px;
+  }
+
+  .footer-row {
+    margin-left: 80px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  /* Navbar section */
+
+  .nav-logo > a {
+    width: 145px;
+  }
+
+  .navbar-toggler {
+    margin: 0 auto;
+  }
+
+  /* Loan section */
+
+  /* .family-pic > img {
+    width: 467px;
+    height: 308px;
+  } */
+
+  .family-pic > img {
+    height: 50%;
+    width: 50%;
+    object-fit: contain;
+  }
+
+  .car-loan,
+  .home-loan {
+    height: 10px;
+    width: 100px;
+  }
+
+  .car-loan {
+    top: 10px;
+    left: 41px;
+  }
+
+  .home-loan {
+    top: 63px;
+    left: 319px;
+  }
+
+  .car-loan > a > img,
+  .home-loan > a > img {
+    height: 15.65px;
+    width: 15.65px;
+    margin-right: 5px;
+  }
+
+  .car-loan > a > span,
+  .home-loan > a > span {
+    font-size: 9px;
+  }
+
+  /* customer experience section */
+
+  .title2 {
+    font-size: 17px;
+  }
+
+  .customer-heading > p {
+    width: 300px;
+  }
+
+  .card-row > .col-3 {
+    width: 50%;
+  }
+
+  .card {
+    width: 160px;
+  }
+
+  .card-img {
+    height: 20px;
+    width: 20px;
+  }
+
+  .card-desc > h4 {
+    margin-top: 30px;
+  }
+
+  .card-desc > p {
+    font-size: 9px;
+  }
+
+  /* Service section */
+
+  .col-3 {
+    width: 100%;
+  }
+
+  .service-hdr > p {
+    width: 350px;
+  }
+
+  /* Result section */
+
+  .title4 {
+    font-size: 25px;
+  }
+
+  .result-hdr > p {
+    max-width: 500.6px;
+    margin: 20px auto 45px;
+    font-size: 12px;
+  }
+
+  .result-row > .col-3 {
+    width: 50%;
+  }
+
+  .folio-card {
+    width: 152px;
+  }
+
+  .title5 {
+    font-size: 24px !important;
+  }
+
+  .folio-card > p {
+    font-size: 11px;
+  }
+
+  /* Footer section */
+
+  .footer-row {
+    margin-left: 114px;
+  }
+
+  .col-20 {
+    width: 100%;
+    margin: 0 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+    /* Navbar Section */
+    .nav-logo > a{
+        width: 120px;
+    }
+
+    /* Footer section */
+
+  .footer-row {
+    margin-left: 75px;
+  }
+}
