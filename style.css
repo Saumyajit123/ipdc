@@ -262,6 +262,7 @@ Loan Section
 .call-logo {
   position: relative;
   display: inline-block;
+  transition: all linear 0.2s;
 }
 
 .call-logo::after {
@@ -274,6 +275,10 @@ Loan Section
   background-color: #cccccc;
 }
 
+.call-logo:hover {
+  transform: scale(1.2);
+}
+
 .social-media > ul {
   display: flex;
   align-items: center;
@@ -282,6 +287,11 @@ Loan Section
 
 .social-media > ul > a {
   display: inline-block;
+  transition: all linear 0.2s;
+}
+
+.media-logo > a:hover {
+  transform: scale(1.4);
 }
 
 .media-logo {
@@ -407,10 +417,11 @@ Customer Experience Section
 .card {
   width: 259px;
   margin: 30px 50px;
+  transition: all linear 0.2s;
 }
 
 .card:hover {
-  box-shadow: 0px 0px 20px black;
+  transform: scale(1.2);
   cursor: pointer;
 }
 
@@ -473,21 +484,27 @@ Our Service Section
   margin: 0 auto;
 }
 
+/* 
 .pic-card1 {
   margin-left: 76px;
   height: 457px;
-}
+  transform: scale(1.2);
+} */
 
-.pic-card > a,
-.pic-card1 > a {
+.pic-card > a {
   min-height: 365px;
 }
 
-.pic-card > a > img,
-.pic-card1 > a > img {
+.pic-card > a > img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  transition: all linear 0.2s;
+}
+
+.pic-card > a > img:hover {
+  transform: scale(1.1);
+  overflow: hidden;
 }
 
 .pic-desc {
@@ -507,6 +524,11 @@ Our Service Section
   width: 30.83px;
   height: 30.83px;
   margin-left: 22px;
+  transition: linear 0.2s all;
+}
+
+.pic-desc > img:hover {
+  transform: scale(1.4);
 }
 
 /* 
@@ -605,6 +627,11 @@ Footer Section
 
 .social-icon-list > li > a {
   margin-right: 16px;
+  transition: all linear 0.3s;
+}
+
+.social-icon-list > li > a:hover {
+  transform: scale(1.4);
 }
 
 .products,
@@ -631,13 +658,14 @@ Footer Section
 
 @media screen and (max-width: 992px) {
   /* Navbar Section */
+
   .navbar-collapsed {
     display: none;
   }
 
   .navbar-toggler {
     display: block;
-    margin-left: auto;
+    margin: 0 auto !important;
   }
 
   .hdr-sec {
@@ -670,6 +698,11 @@ Footer Section
     margin: 0 0 20px !important;
   }
 
+  .nav-btn {
+    margin-top: 10px;
+    margin-left: 436px;
+  }
+
   /* Loan section */
 
   .col-4,
@@ -681,6 +714,9 @@ Footer Section
     margin: 0 auto;
     max-height: 630px;
     width: 920px;
+    position: relative;
+    top: 20px;
+    left: 70px;
   }
 
   .family-pic > img {
@@ -689,12 +725,26 @@ Footer Section
     object-fit: contain;
   }
 
-  .home-loan,
+  .home-loan {
+    display: flex;
+    justify-content: center;
+    width: 148px;
+    height: 42px;
+    padding: 15px;
+    position: absolute;
+    top: 25px;
+    left: -24px;
+  }
+
   .car-loan {
     display: flex;
     justify-content: center;
-    width: 170px;
-    height: 50px;
+    width: 148px;
+    height: 42px;
+    padding: 15px;
+    position: absolute;
+    top: 74px;
+    left: 312px;
   }
 
   .car-loan > a > img,
@@ -749,6 +799,14 @@ Footer Section
     width: 160px;
   }
 
+  .navbar-toggler {
+    margin: 0 400px !important;
+  }
+
+  .nav-btn {
+    margin-left: 324px;
+  }
+
   /* Loan section */
   .loan-row {
     flex-wrap: wrap-reverse;
@@ -764,16 +822,70 @@ Footer Section
   }
 
   .family-pic > img {
-    height: 538px;
-    width: 770px;
+    height: 40%;
+    width: 40%;
+    object-fit: contain;
   }
 
   .home-loan {
-    right: 208px;
+    padding: 10px;
+    width: 138px;
+    height: 38px;
   }
 
   .car-loan {
-    left: 84px;
+    top: 55px;
+    left: 247px;
+    padding: 10px;
+    width: 138px;
+    height: 38px;
+  }
+
+  /* Customer Experience Section */
+
+  .customer-sec {
+    padding: 65px 0;
+  }
+
+  .customer-heading {
+    max-width: 650px;
+  }
+
+  /* Service section */
+
+  .service-hdr {
+    max-width: 650px;
+  }
+
+  .service-hdr > p {
+    max-width: 750px;
+    font-size: 14px;
+  }
+
+  .pic-row {
+    margin-right: 65px;
+  }
+
+  .pic-card {
+    width: 208px;
+  }
+
+  .pic-desc {
+    margin-top: -47px;
+  }
+
+  .col-3 {
+    width: 40%;
+  }
+
+  /* Result Section */
+
+  .result-hdr {
+    max-width: 603px;
+  }
+
+  .result-hdr > p {
+    margin: 20px 40px 91px;
   }
 
   /* Footer section */
@@ -810,8 +922,8 @@ Footer Section
   } */
 
   .family-pic > img {
-    height: 50%;
-    width: 50%;
+    height: 40%;
+    width: 40%;
     object-fit: contain;
   }
 
@@ -925,13 +1037,12 @@ Footer Section
 }
 
 @media screen and (max-width: 425px) {
+  /* Navbar Section */
+  .nav-logo > a {
+    width: 120px;
+  }
 
-    /* Navbar Section */
-    .nav-logo > a{
-        width: 120px;
-    }
-
-    /* Footer section */
+  /* Footer section */
 
   .footer-row {
     margin-left: 75px;
