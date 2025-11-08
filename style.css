@@ -1,7 +1,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
 /* @import url('https://fonts.cdnfonts.com/css/metropolis'); */
 @font-face {
-  font-family: Metropolis;
+  font-family: "Metropolis";
   src: url("./assets/Fonts/metropolis/Metropolis-Black.otf");
 }
 
@@ -19,7 +19,7 @@
 }
 
 body {
-  font-family: Metropolis, sans-serif;
+  font-family: "Metropolis", sans-serif;
 }
 
 .container {
@@ -109,7 +109,6 @@ nav,
 .navbar-collapsed > ul {
   display: flex;
   align-items: center;
-  font-size: 12px;
 }
 
 .navbar-collapsed > ul {
@@ -126,7 +125,6 @@ nav,
 
 .nav-items {
   margin-right: 41.6px;
-  font-family: "Metropolis-normal";
 }
 
 .search-logo {
@@ -135,13 +133,16 @@ nav,
 
 .nav-links {
   color: black;
+  letter-spacing: 2px;
+  font-size: 12px;
 }
 
 .nav-btn {
   margin-left: 27px;
 }
 
-.navbar-toggler {
+.navbar-toggler,
+.menu {
   display: none;
 }
 
@@ -182,8 +183,9 @@ Loan Section
 } */
 
 .title1 {
-  width: 435px;
-  font-size: 63px;
+  max-width: 435px;
+  font-size: 57px;
+  line-height: calc(68 / 57);
   font-weight: 800;
   line-height: 68px;
 }
@@ -193,17 +195,16 @@ Loan Section
 }
 
 .loan-content > p {
-  font-family: "Metropolis-normal";
   font-size: 16px;
+  line-height: calc(22 / 16);
   color: var(--secondary-color);
   margin: 23px 0 42px;
   max-width: 391.74px;
 }
 
-/* .apply-btn{
-    margin-top: 38px;
-    max-width: 376.28px;
-} */
+.apply-btn {
+  display: flex;
+}
 
 .secondary-btn {
   font-size: 12px;
@@ -265,7 +266,7 @@ Loan Section
   transition: all linear 0.2s;
 }
 
-.call-logo::after {
+.social-links .call-logo::after {
   content: "";
   position: absolute;
   top: 0;
@@ -306,8 +307,7 @@ Loan Section
 } */
 
 .family-pic {
-  width: 932.96px;
-  max-height: 654px;
+  max-width: 932.96px;
   position: relative;
   top: 10px;
   right: 35px;
@@ -388,7 +388,7 @@ Customer Experience Section
 */
 
 .customer-sec {
-  padding-top: 200px;
+  padding: 50px 0;
 }
 
 .customer-heading {
@@ -398,7 +398,7 @@ Customer Experience Section
 .customer-heading > p {
   max-width: 622.42px;
   margin: 15px auto;
-  font-family: "Metropolis-normal";
+  font-family: "Metropolis";
   font-size: 14px;
   line-height: 22px;
   color: var(--quaternary-color);
@@ -411,11 +411,10 @@ Customer Experience Section
 
 .card-row {
   justify-content: center;
-  margin: 50px 0;
 }
 
 .card {
-  width: 259px;
+  max-width: 259px;
   margin: 30px 50px;
   transition: all linear 0.2s;
 }
@@ -425,24 +424,21 @@ Customer Experience Section
   cursor: pointer;
 }
 
-.card-desc {
-  padding: 0 75px 0 24px;
-}
-
 .card-desc > h4 {
   color: var(--tertiary-color);
 }
 
 .card-desc > p {
   margin-top: 10px;
-  font-family: "Metropolis-normal";
+  font-weight: 400;
+  line-height: calc(24 / 14);
   max-width: 160px;
   font-size: 14px;
   color: var(--quaternary-color);
 }
 
 .card-img > img {
-  margin-left: 24px;
+  margin-right: auto;
 }
 
 /* 
@@ -466,10 +462,10 @@ Our Service Section
 }
 
 .service-hdr > p {
-  font-family: "Metropolis-normal";
   max-width: 791.88px;
   margin: 15px auto;
   font-size: 16px;
+  line-height: calc(22 / 16);
   color: var(--quaternary-color);
 }
 
@@ -479,7 +475,7 @@ Our Service Section
 }
 
 .pic-card {
-  width: 254px;
+  max-width: 254px;
   height: 457px;
   margin: 0 auto;
 }
@@ -515,15 +511,15 @@ Our Service Section
 }
 
 .pic-desc > p {
-  font-family: "Metropolis-normal";
-  width: 195px;
+  max-width: 195px;
   color: var(--tertiary-color);
+  margin-right: auto;
 }
 
 .pic-desc > img {
   width: 30.83px;
   height: 30.83px;
-  margin-left: 22px;
+  margin-left: auto;
   transition: linear 0.2s all;
 }
 
@@ -539,7 +535,7 @@ Result Section
 
 .result-sec {
   min-height: 648px;
-  padding: 99px 0 0px;
+  padding: 99px 0;
 }
 
 .result-hdr {
@@ -547,20 +543,22 @@ Result Section
 }
 
 .title4 {
+  /* max-width: 474px; */
+  margin: 18.84px auto;
   color: var(--tertiary-color);
   font-size: 36px;
 }
 
 .result-hdr > p {
-  font-family: "Metropolis-normal";
   max-width: 520.6px;
-  margin: 20px auto 91px;
+  margin: 0 auto 66px;
   font-size: 16px;
+  line-height: calc(22 / 16);
   color: var(--quaternary-color);
 }
 
 .folio-card {
-  width: 172px;
+  max-width: 172px;
   margin: 0 auto 55px;
 }
 
@@ -574,9 +572,7 @@ Result Section
   margin-bottom: 8px;
 }
 
-.folio-card > p,
-.folio-card1 > p {
-  font-family: "Metropolis-normal";
+.folio-card > p {
   color: var(--secondary-color);
   font-size: 16px;
 }
@@ -595,6 +591,10 @@ Footer Section
 ===================
 */
 
+.footer-sec {
+  padding: 30px 0;
+}
+
 .social-icon-list {
   display: flex;
   list-style-type: none;
@@ -612,21 +612,19 @@ Footer Section
 }
 
 .footer-hdr {
-  font-family: "Metropolis";
   font-size: 18px;
   margin-bottom: 20px;
 }
 
 .footer-links > p {
-  width: 180px;
-  font-family: "Metropolis-regular";
+  max-width: 180px;
   font-size: 14px;
   color: var(--secondary-color);
   margin-bottom: 16px;
 }
 
 .social-icon-list > li > a {
-  margin-right: 16px;
+  margin-right: auto;
   transition: all linear 0.3s;
 }
 
@@ -637,24 +635,55 @@ Footer Section
 .products,
 .getstarted,
 .about {
-  font-family: "Metropolis";
   font-size: 18px;
   margin-bottom: 20px;
   color: var(--tertiary-color);
 }
 
 .footer-list > li > a {
-  font-family: "Metropolis-regular";
   font-size: 14px;
   margin-bottom: 10px;
   color: var(--secondary-color);
 }
 
 .footer-links {
-  margin: 0 35px;
+  margin: 0 30px;
 }
 
 /* MEDIA QUERIES */
+
+@media screen and (max-width: 1200px) {
+  /* Navbar Section */
+
+  .nav-items {
+    margin-right: 26px;
+  }
+
+  /* Loan Section */
+
+  .secondary-btn,
+  .calculator-btn {
+    padding: 10px 14px;
+  }
+
+  .car-loan,
+  .home-loan {
+    padding: 10.5px 14.92px;
+  }
+
+  .car-loan > a > img,
+  .home-loan > a > img {
+    margin-right: 8px;
+  }
+
+  .car-loan {
+    left: 60px;
+  }
+
+  .home-loan {
+    right: 34px;
+  }
+}
 
 @media screen and (max-width: 992px) {
   /* Navbar Section */
@@ -663,9 +692,26 @@ Footer Section
     display: none;
   }
 
+  .menu {
+    display: flex !important;
+    align-items: center;
+    margin-left: auto;
+    /* margin-right: 20px; */
+  }
+
+  .primary-btn {
+    padding: 9px 17px;
+    font-size: 11px;
+  }
+
+  .search-logo > a > img {
+    height: 20px;
+    width: 20px;
+  }
+
   .navbar-toggler {
     display: block;
-    margin: 0 auto !important;
+    /* margin-left: auto !important; */
   }
 
   .hdr-sec {
@@ -679,28 +725,28 @@ Footer Section
     left: 0;
     right: 0;
     padding: 15px 0;
-    height: 70vh;
+    height: 50vh;
     z-index: 888888;
     background-color: antiquewhite;
   }
 
   .navbar-collapsed > ul {
     flex-direction: column;
+    margin-top: 30px;
   }
 
-  .search-logo,
-  .navbtn {
+  .navbar-collapsed .search-logo,
+  .navbar-collapsed .nav-btn {
+    display: none;
+  }
+
+  .search-logo {
     text-align: center;
-    margin: 0 !important;
+    margin-left: auto !important;
   }
 
   .nav-items {
     margin: 0 0 20px !important;
-  }
-
-  .nav-btn {
-    margin-top: 10px;
-    margin-left: 436px;
   }
 
   /* Loan section */
@@ -710,41 +756,45 @@ Footer Section
     width: 100%;
   }
 
+  .loan-row {
+    flex-wrap: wrap-reverse;
+  }
+
   .family-pic {
     margin: 0 auto;
-    max-height: 630px;
-    width: 920px;
+    /* max-height: 630px; */
+    max-width: 920px;
     position: relative;
     top: 20px;
-    left: 70px;
+    /* left: 222px; */
   }
 
   .family-pic > img {
-    height: 50%;
-    width: 50%;
-    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 
   .home-loan {
     display: flex;
     justify-content: center;
-    width: 148px;
-    height: 42px;
+    max-width: 148px;
+    min-height: 42px;
     padding: 15px;
     position: absolute;
-    top: 25px;
-    left: -24px;
+    top: 143px;
+    left: 512px;
   }
 
   .car-loan {
     display: flex;
     justify-content: center;
-    width: 148px;
-    height: 42px;
+    max-width: 148px;
+    min-height: 42px;
     padding: 15px;
     position: absolute;
-    top: 74px;
-    left: 312px;
+    top: 27px;
+    left: 132px;
   }
 
   .car-loan > a > img,
@@ -765,6 +815,17 @@ Footer Section
 
   .title1 {
     font-size: 70px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .loan-content p {
+    margin: 30px auto !important;
+  }
+
+  .apply-btn,
+  .social-links {
+    justify-content: center;
   }
 
   /* customer experience section */
@@ -800,17 +861,14 @@ Footer Section
   }
 
   .navbar-toggler {
-    margin: 0 400px !important;
+    margin: 0 20px !important;
   }
 
   .nav-btn {
-    margin-left: 324px;
+    margin-left: 24px;
   }
 
   /* Loan section */
-  .loan-row {
-    flex-wrap: wrap-reverse;
-  }
 
   .col-8,
   .col-4 {
@@ -821,24 +879,28 @@ Footer Section
     font-size: 50px !important;
   }
 
+  .family-pic {
+    left: 50px;
+  }
+
   .family-pic > img {
-    height: 40%;
-    width: 40%;
-    object-fit: contain;
+    height: 80%;
+    width: 80%;
+    object-fit: cover;
   }
 
   .home-loan {
     padding: 10px;
-    width: 138px;
-    height: 38px;
+    max-width: 138px;
+    top: 85px;
+    left: 389px;
   }
 
   .car-loan {
-    top: 55px;
-    left: 247px;
+    top: 18px;
+    left: 22px;
     padding: 10px;
-    width: 138px;
-    height: 38px;
+    max-width: 138px;
   }
 
   /* Customer Experience Section */
@@ -849,21 +911,23 @@ Footer Section
 
   .customer-heading {
     max-width: 650px;
+    margin: 0 auto !important;
+  }
+
+  .card-row .col-3 {
+    width: 27%;
   }
 
   /* Service section */
 
   .service-hdr {
     max-width: 650px;
+    margin: 0 auto !important;
   }
 
   .service-hdr > p {
     max-width: 750px;
     font-size: 14px;
-  }
-
-  .pic-row {
-    margin-right: 65px;
   }
 
   .pic-card {
@@ -882,10 +946,15 @@ Footer Section
 
   .result-hdr {
     max-width: 603px;
+    margin: 0 auto !important;
   }
 
   .result-hdr > p {
     margin: 20px 40px 91px;
+  }
+
+  .result-row .col-3 {
+    width: 33%;
   }
 
   /* Footer section */
@@ -916,31 +985,28 @@ Footer Section
 
   /* Loan section */
 
-  /* .family-pic > img {
-    width: 467px;
-    height: 308px;
-  } */
-
-  .family-pic > img {
-    height: 40%;
-    width: 40%;
-    object-fit: contain;
+  .family-pic {
+    left: 63px;
   }
 
-  .car-loan,
-  .home-loan {
-    height: 10px;
-    width: 100px;
+  .family-pic > img {
+    height: 70%;
+    width: 70%;
+    object-fit: contain;
   }
 
   .car-loan {
     top: 10px;
-    left: 41px;
+    left: 4px;
+    max-width: 125px;
+    padding: 10px 10px;
   }
 
   .home-loan {
     top: 63px;
-    left: 319px;
+    left: 246px;
+    max-width: 125px;
+    padding: 10px 10px;
   }
 
   .car-loan > a > img,
@@ -952,7 +1018,7 @@ Footer Section
 
   .car-loan > a > span,
   .home-loan > a > span {
-    font-size: 9px;
+    font-size: 10px;
   }
 
   /* customer experience section */
@@ -962,15 +1028,15 @@ Footer Section
   }
 
   .customer-heading > p {
-    width: 300px;
+    max-width: 300px;
   }
 
   .card-row > .col-3 {
-    width: 50%;
+    width: 42%;
   }
 
   .card {
-    width: 160px;
+    max-width: 160px;
   }
 
   .card-img {
@@ -993,7 +1059,7 @@ Footer Section
   }
 
   .service-hdr > p {
-    width: 350px;
+    max-width: 350px;
   }
 
   /* Result section */
@@ -1008,7 +1074,7 @@ Footer Section
     font-size: 12px;
   }
 
-  .result-row > .col-3 {
+  .result-row .col-3 {
     width: 50%;
   }
 
@@ -1027,11 +1093,11 @@ Footer Section
   /* Footer section */
 
   .footer-row {
-    margin-left: 114px;
+    margin-left: 35px;
   }
 
-  .col-20 {
-    width: 100%;
+  .footer-row .col-20 {
+    width: 40%;
     margin: 0 20px;
   }
 }
@@ -1040,6 +1106,16 @@ Footer Section
   /* Navbar Section */
   .nav-logo > a {
     width: 120px;
+  }
+
+  .car-loan {
+    left: -25px;
+    padding: 8px;
+  }
+
+  .home-loan {
+    top: 45px;
+    left: 205px;
   }
 
   /* Footer section */
