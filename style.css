@@ -22,6 +22,11 @@ body {
   font-family: "Metropolis", sans-serif;
 }
 
+body,
+html {
+  overflow-x: hidden !important;
+}
+
 .container {
   max-width: 1396px;
   padding: 0 15px;
@@ -187,12 +192,11 @@ Loan Section
   font-size: 57px;
   line-height: calc(68 / 57);
   font-weight: 800;
-  line-height: 68px;
 }
 
-.loan-content {
+/* .loan-content {
   padding-top: 111px;
-}
+} */
 
 .loan-content > p {
   font-size: 16px;
@@ -309,8 +313,8 @@ Loan Section
 .family-pic {
   max-width: 932.96px;
   position: relative;
-  top: 10px;
-  right: 35px;
+  /* top: 10px;
+  right: 35px; */
 }
 
 .family-pic > img {
@@ -471,12 +475,12 @@ Our Service Section
 
 .pic-row {
   justify-content: center;
-  margin: 40px 0;
+  margin-top: 40px;
 }
 
 .pic-card {
   max-width: 254px;
-  height: 457px;
+  min-height: 400px;
   margin: 0 auto;
 }
 
@@ -535,7 +539,7 @@ Result Section
 
 .result-sec {
   min-height: 648px;
-  padding: 99px 0;
+  padding: 44px 0;
 }
 
 .result-hdr {
@@ -661,6 +665,15 @@ Footer Section
 
   /* Loan Section */
 
+  .col-4,
+  .col-8 {
+    width: 100%;
+  }
+
+  .loan-row {
+    flex-wrap: wrap-reverse;
+  }
+
   .secondary-btn,
   .calculator-btn {
     padding: 10px 14px;
@@ -674,14 +687,16 @@ Footer Section
   .car-loan > a > img,
   .home-loan > a > img {
     margin-right: 8px;
+    width: 25px;
+    height: 25px;
   }
 
   .car-loan {
-    left: 60px;
+    left: 112px;
   }
 
   .home-loan {
-    right: 34px;
+    right: 96px;
   }
 }
 
@@ -695,7 +710,7 @@ Footer Section
   .menu {
     display: flex !important;
     align-items: center;
-    margin-left: auto;
+    margin-left: auto !important;
     margin-right: 20px;
   }
 
@@ -766,17 +781,6 @@ Footer Section
 
   .family-pic {
     margin: 0 auto;
-    /* max-height: 630px; */
-    max-width: 920px;
-    position: relative;
-    top: 20px;
-    /* left: 222px; */
-  }
-
-  .family-pic > img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
   }
 
   .home-loan {
@@ -784,9 +788,8 @@ Footer Section
     justify-content: center;
     max-width: 148px;
     padding: 15px;
-    position: absolute;
     top: 143px;
-    left: 556px;
+    right: 87px;
   }
 
   .car-loan {
@@ -794,7 +797,6 @@ Footer Section
     justify-content: center;
     max-width: 148px;
     padding: 15px;
-    position: absolute;
     top: 27px;
     left: 132px;
   }
@@ -816,12 +818,13 @@ Footer Section
   }
 
   .title1 {
-    font-size: 70px;
+    font-size: 50px;
     margin: 0 auto;
     text-align: center;
   }
 
   .loan-content p {
+    text-align: center;
     margin: 30px auto !important;
   }
 
@@ -853,6 +856,12 @@ Footer Section
   .col-3 {
     width: 50%;
   }
+
+  /* Footer Section */
+
+  .footer-sec .col-20 {
+    padding: 0 !important;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -870,6 +879,10 @@ Footer Section
     margin-left: 24px;
   }
 
+  .menu {
+    margin-right: 0 !important;
+  }
+
   /* Loan section */
 
   .col-8,
@@ -878,11 +891,11 @@ Footer Section
   }
 
   .title1 {
-    font-size: 50px !important;
+    font-size: 42px !important;
   }
 
   .family-pic {
-    left: 50px;
+    left: 29px;
   }
 
   .family-pic > img {
@@ -893,16 +906,14 @@ Footer Section
 
   .home-loan {
     padding: 10px;
-    max-width: 138px;
     top: 85px;
-    left: 409px;
+    right: 97px;
   }
 
   .car-loan {
     top: 18px;
     left: 22px;
     padding: 10px;
-    max-width: 138px;
   }
 
   /* Customer Experience Section */
@@ -933,7 +944,7 @@ Footer Section
   }
 
   .pic-card {
-    width: 208px;
+    max-width: 208px;
   }
 
   .pic-desc {
@@ -985,33 +996,27 @@ Footer Section
     margin: 0 auto;
   }
 
-  .menu {
+  /* .menu {
     margin-right: 0 !important;
-  }
+  } */
 
   /* Loan section */
-
-  .family-pic {
-    left: 63px;
-  }
 
   .family-pic > img {
     height: 70%;
     width: 70%;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   .car-loan {
     top: 10px;
     left: 4px;
-    max-width: 125px;
     padding: 10px 10px;
   }
 
   .home-loan {
-    top: 63px;
-    left: 258px;
-    max-width: 125px;
+    top: 52px;
+    right: 117px;
     padding: 10px 10px;
   }
 
@@ -1030,7 +1035,7 @@ Footer Section
   /* customer experience section */
 
   .title2 {
-    font-size: 17px;
+    font-size: 20px;
   }
 
   .customer-heading > p {
@@ -1062,6 +1067,10 @@ Footer Section
 
   .col-3 {
     width: 100%;
+  }
+
+  .title3 {
+    font-size: 30px !important;
   }
 
   .service-hdr > p {
@@ -1098,13 +1107,8 @@ Footer Section
 
   /* Footer section */
 
-  .footer-row {
-    margin-left: 35px;
-  }
-
   .footer-row .col-20 {
-    width: 40%;
-    margin: 0 20px;
+    width: 100%;
   }
 }
 
@@ -1114,19 +1118,31 @@ Footer Section
     width: 120px;
   }
 
+  /* Loan Section */
+
+  .title1 {
+    font-size: 36px !important;
+  }
+
   .car-loan {
     left: -25px;
-    padding: 8px;
+    padding: 5px 5px;
   }
 
   .home-loan {
-    top: 45px;
-    left: 205px;
+    top: 43px;
+    padding: 5px 5px;
+    right: 88px;
+  }
+
+  .secondary-btn,
+  .calculator-btn {
+    padding: 10px 10px;
   }
 
   /* Footer section */
 
   .footer-row {
-    margin-left: 75px;
+    margin: 0 auto;
   }
 }
