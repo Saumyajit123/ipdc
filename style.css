@@ -1107,8 +1107,33 @@ Footer Section
 
   /* Footer section */
 
+  .footer-row {
+    margin-left: 0 !important;
+  }
+
   .footer-row .col-20 {
     width: 100%;
+  }
+
+  .footer-links {
+    text-align: center !important;
+  }
+
+  .footer-links p {
+    margin: 16px auto !important;
+  }
+
+  .phone {
+    display: flex;
+    justify-content: center;
+  }
+
+  .social-icon-list {
+    justify-content: center;
+  }
+
+  .social-icon-list > li > a {
+    margin: 0 4px !important;
   }
 }
 
